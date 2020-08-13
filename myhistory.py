@@ -6,6 +6,11 @@ import time
 import threading 
 from time import sleep
 import os
+from os import environ
+from flask import Flask
+
+app = Flask(__name__)
+app.run(environ.get('PORT'))
 
 token = os.environ.get('bot_token')
 ids = os.environ.get('bot_ids')
